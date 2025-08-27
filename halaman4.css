@@ -1,0 +1,87 @@
+body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;  
+      font-size: 3em;
+      font-family: sans-serif;
+      gap: 20px;
+    }
+.satu {
+      background: #D6A99D;
+      color:#1C352D;
+    }
+.dua{
+  background: #5D688A;
+  color: #F7A5A5;
+}
+.control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Dancing Script', cursive;
+}
+.lirik {
+  padding: 20px;
+  overflow-y: auto; /* biar bisa discroll */
+  background: #fff;
+  line-height: 1.6;
+  font-size: 1.1em;
+  font-family: Georgia, 'Times New Roman', serif;
+  animation: slideFromLeft 1s ease forwards;
+
+  max-width: 1000px;       /* lebar maksimum lirik */
+  word-wrap: break-word;  /* membungkus kata panjang */
+  text-align: left;       /* rata kiri lebih rapi */
+  margin-right: 20px; 
+}
+
+.foto {
+  background: white;
+  padding: 10px 10px 25px 10px; /* bawah lebih tebal */
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* bayangan biar realistis */
+  border-radius: 4px;
+  max-width: 250px;
+  text-align: center;
+  transform: rotate(-2deg); /* sedikit miring biar lebih "vintage" */
+  transition: transform 0.3s;
+}
+
+.foto:hover {
+  transform: rotate(0deg) scale(1.05); /* efek saat hover */
+}
+
+.foto img {
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
